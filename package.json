@@ -1,0 +1,25 @@
+{
+  "name": "offline-app",
+  "version": "1.0.0",
+  "description": "offline app example",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierr/offline-app.git"
+  },
+  "keywords": [
+    "offline"
+  ],
+  "author": "Pierre Besson <pierre.besson7+npm@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pierr/offline-app/issues"
+  },
+  "homepage": "https://github.com/pierr/offline-app",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}

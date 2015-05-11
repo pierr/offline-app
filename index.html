@@ -1,0 +1,36 @@
+<!doctype html>
+<html manifest="offline-app.appcache">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link id="page_favicon" href="./favicon.ico" rel="icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="mui.css" rel="stylesheet" type="text/css" />
+    <script src="mui.js"></script>
+
+  </head>
+  <body>
+  <script>
+    window.addEventListener('load', function() {
+      // add button dynamically
+      var buttonEl = document.createElement('button');
+      buttonEl.className = 'mui-btn mui-btn-primary mui-btn-raised';
+      buttonEl.innerHTML = "Test d'applciation offline";
+      document.body.appendChild(buttonEl);
+    });
+    function onUpdateReady() {
+      alert('found new version!');
+    }
+    window.applicationCache.addEventListener('updateready', onUpdateReady);
+    if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+      onUpdateReady();
+    }
+  </script>
+    <!--
+
+    content goes here
+
+    -->
+
+  </body>
+</html>
